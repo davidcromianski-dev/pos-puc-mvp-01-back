@@ -1,0 +1,60 @@
+[2025-07-02 23:45:47,387] INFO _log() L97   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:47,387] INFO _log() L97   [33mPress CTRL+C to quit[0m - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,173] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "GET /apidocs/ HTTP/1.1" 200 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,197] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,197] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,198] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,200] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,286] ERROR get() L167  jsonify failure; defaulting to json.dumps - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py L167 
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 507, in get_apispecs
+    for key, value in responses.items()
+AttributeError: 'NoneType' object has no attribute 'items'
+[2025-07-02 23:45:49,296] ERROR log_exception() L875  Exception on /apispec_1.json [GET] - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/app.py L875 
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 507, in get_apispecs
+    for key, value in responses.items()
+AttributeError: 'NoneType' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flask/views.py", line 191, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)  # type: ignore[no-any-return]
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 168, in get
+    specs = json.dumps(self.loader())
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 507, in get_apispecs
+    for key, value in responses.items()
+AttributeError: 'NoneType' object has no attribute 'items'
+[2025-07-02 23:45:49,296] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:45:49,300] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:45:49] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,766] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:46:31] "GET /apidocs/ HTTP/1.1" 200 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,802] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:46:31] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,803] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:46:31] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,804] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:46:31] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,807] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:46:31] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,961] INFO _log() L97   127.0.0.1 - - [02/Jul/2025 23:46:31] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-02 23:46:31,965] ERROR get() L167  jsonify failure; defaulting to json.dumps - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py L167 
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 507, in get_apispecs
+    for key, value in responses.items()
+AttributeError: 'NoneType' object has no attribute 'items'

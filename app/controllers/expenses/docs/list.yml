@@ -1,0 +1,32 @@
+summary: Lista todas as despesas
+description: Retorna uma lista com todas as despesas cadastradas.
+tags:
+  - Despesas
+responses:
+  200:
+    description: Sucesso
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              bank:
+                type: string
+              active:
+                type: boolean
+              created_at:
+                type: string
+                format: date-time
+        example:
+          - id: 1
+            bank: Banco do Brasil
+            active: true
+            created_at: 2021-01-01T00:00:00Z
+          - id: 2
+            bank: Itaú
+            active: true
+            created_at: 2021-01-01T00:00:00Z

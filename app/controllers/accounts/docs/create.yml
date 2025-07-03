@@ -1,0 +1,49 @@
+summary: Cria uma conta
+description: Cria uma nova conta
+tags:
+  - Contas
+parameters:
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        bank:
+          type: string
+        active:
+          type: boolean
+responses:
+  201:
+    description: Conta criada com sucesso
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+            id:
+              type: integer
+            data:
+              type: object
+              properties:
+                id:
+                  type: integer
+                bank:
+                  type: string
+                active:
+                  type: boolean
+                created_at:
+                  type: string
+                  format: date-time
+        example:
+          message: Account created successfully
+          id: 1
+          data:
+            id: 1
+            bank: Banco do Brasil
+            active: true
+            created_at: 2021-01-01T00:00:00Z
+  400:
+    description: Dados inválidos

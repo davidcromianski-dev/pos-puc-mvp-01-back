@@ -4,6 +4,30 @@
 
 Organize suas contas de maneira intuitiva e controlada!
 
+## Iniciar ambiente virtual (venv)
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## Instalar as depedências
+
+Utilizando o gerenciador `pip`, execute no terminal:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Construir o Banco de dados
 
 Para o banco de dados, utilizo a biblioteca SQLAlchemy, que atua como um ORM gerenciando todas as operações com o banco.
@@ -40,7 +64,3 @@ flask db upgrade
 ```bash
 flask run
 ```
-
-### Deploy
-
-Render.com

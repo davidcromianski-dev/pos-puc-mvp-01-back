@@ -1,0 +1,26 @@
+summary: Deletar receita
+description: Deleta uma receita específica
+tags:
+  - Receitas
+parameters:
+  - name: id
+    in: path
+    type: integer
+    required: true
+    description: ID da receita
+responses:
+  200:
+    description: Receita deletada com sucesso
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+        id:
+          type: integer
+    examples:
+      application/json:
+        message: Receita deletada com sucesso
+        id: 1
+  404:
+    description: Receita não encontrada 

@@ -1,0 +1,56 @@
+summary: Buscar despesa por ID
+description: Retorna uma despesa específica
+tags:
+  - Despesas
+parameters:
+  - name: id
+    in: path
+    type: integer
+    required: true
+    description: ID da despesa
+responses:
+  200:
+    description: Despesa encontrada
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+        amount:
+          type: number
+        description:
+          type: string
+        category:
+          type: string
+        account_id:
+          type: integer
+        expense_type:
+          type: string
+        payment_method:
+          type: string
+        expected_date:
+          type: string
+          format: date
+        actual_date:
+          type: string
+          format: date
+        status:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+    examples:
+      application/json:
+        id: 1
+        amount: 100.50
+        description: Compra de material
+        category: Escritório
+        account_id: 1
+        expense_type: Fixa
+        payment_method: Cartão de Crédito
+        expected_date: 2023-05-01
+        actual_date: 2023-05-01
+        status: PA
+        created_at: 2023-05-01T10:00:00Z
+  404:
+    description: Despesa não encontrada 

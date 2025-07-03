@@ -1,0 +1,37 @@
+[2025-07-03 00:04:00,011] INFO _log() L97   [33mPress CTRL+C to quit[0m - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-03 00:04:01,540] INFO _log() L97   127.0.0.1 - - [03/Jul/2025 00:04:01] "GET /apidocs/ HTTP/1.1" 200 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-03 00:04:01,585] INFO _log() L97   127.0.0.1 - - [03/Jul/2025 00:04:01] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-03 00:04:01,585] INFO _log() L97   127.0.0.1 - - [03/Jul/2025 00:04:01] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-03 00:04:01,587] INFO _log() L97   127.0.0.1 - - [03/Jul/2025 00:04:01] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-03 00:04:01,589] INFO _log() L97   127.0.0.1 - - [03/Jul/2025 00:04:01] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 - - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/werkzeug/_internal.py L97  
+[2025-07-03 00:04:01,760] ERROR get() L167  jsonify failure; defaulting to json.dumps - call_trace=/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py L167 
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 581, in load_from_file
+    enc = detect_by_bom(swag_path)
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 616, in detect_by_bom
+    with open(path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/app/controllers/accounts/docs/accounts/list.yml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 590, in load_from_file
+    enc = detect_by_bom(swag_path)
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 616, in detect_by_bom
+    with open(path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/app/controllers/accounts/docs/accounts/list.yml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 641, in parse_docstring
+    full_doc = load_from_file(swag_path, swag_type)
+  File "/home/david/PhpstormProjects/dev-full-stack/pos-puc-mvp-01-back/venv/lib/python3.10/site-packages/flasgger/utils.py", line 604, in load_from_file
+    if package_spec.has_location:
+AttributeError: 'NoneType' object has no attribute 'has_location'
