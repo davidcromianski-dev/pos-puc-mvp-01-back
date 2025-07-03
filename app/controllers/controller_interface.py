@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from flask import Blueprint, request, jsonify
 from flasgger import swag_from
 from ..services.service_interface import ServiceInterface
