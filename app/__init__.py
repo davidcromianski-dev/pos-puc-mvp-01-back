@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
@@ -16,6 +16,12 @@ def create_app(config_class):
     db.init_app(app)
     migrate.init_app(app, db)
     Swagger(app)
+
+    @app.get('/')
+    def home():
+        """Redireciona para /apidocs
+        """
+        return redirect('/apidocs')
     
     from .controllers.accounts.account_controller import account_bp, account_url_prefix
     from .controllers.expenses.expense_controller import expense_bp, expense_url_prefix

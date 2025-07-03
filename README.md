@@ -16,6 +16,7 @@ venv\Scripts\activate
 ### Linux
 
 ```bash
+apt install python3.12-venv # Em distros baseadas em Debian/Ubuntu
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -52,7 +53,7 @@ $env:FLASK_APP = "run.py"
 ```bash
 # SOMENTE 1x
 flask db init
-
+mkdir database
 flask db migrate -m "Criação das tabelas do banco de dados"
 flask db upgrade
 ```
