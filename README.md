@@ -65,3 +65,17 @@ flask db upgrade
 ```bash
 flask run
 ```
+
+### Iniciar utilizando o init
+
+Linux
+
+```bash
+sudo bash init.sh
+```
+
+Windows
+
+```bash
+.\script.bat
+```
