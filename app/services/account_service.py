@@ -1,7 +1,7 @@
-from .service_interface import ServiceInterface
+from .abstract_service import AbstractService
 from ..models.account_model import Account
 
-class AccountService(ServiceInterface):
+class AccountService(AbstractService):
     
     """
     Service to manipulate the Account domain

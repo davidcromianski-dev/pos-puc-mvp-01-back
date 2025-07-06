@@ -1,11 +1,11 @@
 from sqlalchemy import func, Enum, Column, Integer, Float, String, Date, DateTime, ForeignKey
-from ..models.model_interface import ModelInterface
+from .abstract_model import AbstractModel
 
 """
 This module defines the Expense model, representing a financial expense record in the system.
 """
 
-class Expense(ModelInterface):
+class Expense(AbstractModel):
     
     """
     Represents an Expense, an amount of money that had been or will be deducted from an account.

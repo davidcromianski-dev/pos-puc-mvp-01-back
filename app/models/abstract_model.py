@@ -1,8 +1,8 @@
 from sqlalchemy import Column
 from abc import abstractmethod
-from .. import db
+from app.extensions import db
 
-class ModelInterface(db.Model):
+class AbstractModel(db.Model):
     __abstract__ = True
     
     __table_args__ = {'sqlite_autoincrement': True}

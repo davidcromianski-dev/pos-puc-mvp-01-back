@@ -1,11 +1,11 @@
 from sqlalchemy import func, Column, Integer, String, DateTime, Boolean
-from ..models.model_interface import ModelInterface
+from .abstract_model import AbstractModel
 
 """
 This module defines the Account model, representing a bank account in the system.
 """
 
-class Account(ModelInterface):
+class Account(AbstractModel):
     """
     Represents a bank account used for tracking financial transactions.
 

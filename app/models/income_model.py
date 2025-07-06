@@ -1,11 +1,11 @@
 from sqlalchemy import func, Enum, Column, Integer, Float, String, Date, DateTime, ForeignKey
-from ..models.model_interface import ModelInterface
+from .abstract_model import AbstractModel
 
 """
 This module defines the Income model, representing a financial income record in the system.
 """
 
-class Income(ModelInterface):
+class Income(AbstractModel):
     """
     Represents an Income, an amount of money that has been or will be received.
 
