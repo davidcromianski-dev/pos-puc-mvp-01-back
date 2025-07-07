@@ -18,6 +18,8 @@ class ExpenseController(AbstractController):
     def register(self):
         @self._app.get('/expenses', tags=[self._tag],
                        responses={"200": ExpensesResponseSchema, "404": ErrorSchema})
+        @self._app.get('/expenses/', tags=[self._tag],
+                       responses={"200": ExpensesResponseSchema, "404": ErrorSchema})
         def list_expenses():
             """
             Lista todas as despesas do sistema

@@ -18,6 +18,8 @@ class IncomeController(AbstractController):
     def register(self):
         @self._app.get('/incomes', tags=[self._tag],
                        responses={"200": IncomesResponseSchema, "404": ErrorSchema})
+        @self._app.get('/incomes/', tags=[self._tag],
+                       responses={"200": IncomesResponseSchema, "404": ErrorSchema})
         def list_incomes():
             """
             Lista todas as receitas do sistema

@@ -18,6 +18,8 @@ class AccountController(AbstractController):
     def register(self):
         @self._app.get('/accounts', tags=[self._tag],
                        responses={"200": AccountsResponseSchema, "404": ErrorSchema})
+        @self._app.get('/accounts/', tags=[self._tag],
+                       responses={"200": AccountsResponseSchema, "404": ErrorSchema})
         def list_accounts():
             """
             Lista todas as contas do sistema
