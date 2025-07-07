@@ -4,6 +4,15 @@
 
 Organize suas contas de maneira intuitiva e controlada!
 
+## Tecnologias do Back-end
+
+- Python
+- Flask
+- Flask OpenAPI
+- Flask SQLAlchemy
+- Flask CORS
+- SQLite
+
 ## Iniciar ambiente virtual (venv)
 
 ### Windows
