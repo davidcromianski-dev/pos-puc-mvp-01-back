@@ -18,3 +18,12 @@ class IncomeService(AbstractService):
            data['expected_date'] = super().handle_date(data['expected_date'])
 
         return super().create(data)
+    
+    def update(self, id: int, data: Dict[str, Any]) -> AbstractModel:
+        if (data['actual_date']):
+            data['actual_date'] = super().handle_date(data['actual_date'])
+
+        if(data['expected_date']):
+           data['expected_date'] = super().handle_date(data['expected_date'])
+
+        return super().update(id, data)
